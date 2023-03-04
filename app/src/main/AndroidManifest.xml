@@ -10,7 +10,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Inventory"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -21,6 +21,10 @@
         <activity android:name="com.example.admin.inventory.scanItemsActivity" />
         <activity android:name="com.example.admin.inventory.additemActivity" />
         <activity android:name="com.example.admin.inventory.MainActivity" />
+        <activity android:name="com.example.admin.inventory.dashboardActivity" />
+        <activity android:name="com.example.admin.inventory.RegisterActivity" />
+        <activity android:name="com.example.admin.inventory.LoginActivity" />
+        <activity android:name="com.example.admin.inventory.deleteItemsActivity" />
         <activity
             android:name="com.example.admin.inventory.SplashsActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
