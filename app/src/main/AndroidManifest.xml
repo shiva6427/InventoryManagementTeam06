@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admin.inventory">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.admin.inventory.ScanCodeActivitysearch"></activity>
+        <activity android:name="com.example.admin.inventory.ScanCodeActivity" />
+        <activity android:name="com.example.admin.inventory.ScanCodeActivitydel" />
+        <activity android:name="com.example.admin.inventory.viewInventoryActivity" />
+        <activity android:name="com.example.admin.inventory.scanItemsActivity" />
+        <activity android:name="com.example.admin.inventory.additemActivity" />
+        <activity android:name="com.example.admin.inventory.MainActivity" />
+        <activity
+            android:name="com.example.admin.inventory.SplashsActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
