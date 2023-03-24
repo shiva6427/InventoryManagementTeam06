@@ -80,6 +80,28 @@ public class viewInventoryActivity extends AppCompatActivity {
             }
       });
 
+      }
+
+    @Override
+    protected  void  onStart() {
+        super.onStart();
+
+        FirebaseRecyclerAdapter<Items, scanItemsActivity.UsersViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Items, scanItemsActivity.UsersViewHolder>
+                (  Items.class,
+                        R.layout.list_layout,
+                        scanItemsActivity.UsersViewHolder.class,
+                        mdatabaseReference )
+        {
+            @Override
+            protected void populateViewHolder(scanItemsActivity.UsersViewHolder viewHolder, Items model, int position){
+
+                viewHolder.setDetails(getApplicationContext(),model.getItembarcode(),model.getItemcategory(),model.getItemname(),model.getItemprice());
+            }
+        };
+
+        mrecyclerview.setAdapter(firebaseRecyclerAdapter);
+    }
+
 
   }
-}
+
