@@ -46,4 +46,40 @@ public class scanItemsActivity extends AppCompatActivity {
         mrecyclerview.setLayoutManager(manager);
         mrecyclerview.setHasFixedSize(true);
         mrecyclerview.setLayoutManager(new LinearLayoutManager(this));
+
+        scantosearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ScanCodeActivitysearch.class));
+            }
+        });
+
+        searchbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String searchtext = resultsearcheview.getText().toString();
+                firebasesearch(searchtext);
+            }
+        });
+    }
+
+    public void firebasesearch(String searchtext){
+        Query firebaseSearchQuery = mdatabaseReference.orderByChild("itembarcode").startAt(searchtext).endAt(searchtext+"\uf8ff");
+        FirebaseRecyclerAdapter<Items, UsersViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Items, UsersViewHolder>
+                (  Items.class,
+                        R.layout.list_layout,
+                        UsersViewHolder.class,
+                        firebaseSearchQuery )
+        {
+            @Override
+            protected void populateViewHolder(UsersViewHolder viewHolder, Items model,int position){
+
+                viewHolder.setDetails(getApplicationContext(),model.getItembarcode(),model.getItemcategory(),model.getItemname(),model.getItemprice());
+            }
+        };
+
+        mrecyclerview.setAdapter(firebaseRecyclerAdapter);
+    }
+
+
 }}
