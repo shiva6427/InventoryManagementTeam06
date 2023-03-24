@@ -88,5 +88,16 @@ public class scanItemsActivity extends AppCompatActivity {
             mView =itemView;
         }
 
+        public void setDetails(Context ctx,String itembarcode, String itemcategory, String itemname, String itemprice){
+            TextView item_barcode = (TextView) mView.findViewById(R.id.viewitembarcode);
+            TextView item_name = (TextView) mView.findViewById(R.id.viewitemname);
+            TextView item_category = (TextView) mView.findViewById(R.id.viewitemcategory);
+            TextView item_price = (TextView) mView.findViewById(R.id.viewitemprice);
+
+            item_barcode.setText(itembarcode);
+            item_category.setText(itemcategory);
+            item_name.setText(itemname);
+            item_price.setText(itemprice);
+        }
 
 }}
