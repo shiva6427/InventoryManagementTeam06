@@ -22,7 +22,12 @@ import com.google.firebase.database.Query;
 
 public class scanItemsActivity extends AppCompatActivity {
     public static EditText resultsearcheview;
-
+    private FirebaseAuth firebaseAuth;
+    ImageButton scantosearch;
+    Button searchbtn;
+    Adapter adapter;
+    RecyclerView mrecyclerview;
+    DatabaseReference mdatabaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
