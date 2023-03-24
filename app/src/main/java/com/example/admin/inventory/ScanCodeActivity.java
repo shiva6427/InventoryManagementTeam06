@@ -25,9 +25,7 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
 
     @Override
     public void handleResult(Result result) {
-
         additemActivity.resulttextview.setText(result.getText());
-
         onBackPressed();
     }
 
@@ -42,4 +40,9 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
         scannerView.setResultHandler(this);
         scannerView.startCamera();
     }
+    /*@Override
+    protected void onPause() {
+        super.onPause();
+        scannerView.stopCamera();
+    }*/
 }
