@@ -32,5 +32,18 @@ public class scanItemsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_items);
+        firebaseAuth = FirebaseAuth.getInstance();
+        final FirebaseUser users = firebaseAuth.getCurrentUser();
+        String finaluser=users.getEmail();
+        String resultemail = finaluser.replace(".","");
+        mdatabaseReference = FirebaseDatabase.getInstance().getReference("Users").child(resultemail).child("Items");
+        resultsearcheview = findViewById(R.id.searchfield);
+        scantosearch = findViewById(R.id.imageButtonsearch);
+        searchbtn = findViewById(R.id.searchbtnn);
 
-    }}
+        mrecyclerview = findViewById(R.id.recyclerViews);
+        LinearLayoutManager manager = new LinearLayoutManager(this);
+        mrecyclerview.setLayoutManager(manager);
+        mrecyclerview.setHasFixedSize(true);
+        mrecyclerview.setLayoutManager(new LinearLayoutManager(this));
+}}
