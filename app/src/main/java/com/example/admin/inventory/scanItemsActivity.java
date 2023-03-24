@@ -81,5 +81,12 @@ public class scanItemsActivity extends AppCompatActivity {
         mrecyclerview.setAdapter(firebaseRecyclerAdapter);
     }
 
+    public static class UsersViewHolder extends RecyclerView.ViewHolder{
+        View mView;
+        public UsersViewHolder(View itemView){
+            super(itemView);
+            mView =itemView;
+        }
+
 
 }}
