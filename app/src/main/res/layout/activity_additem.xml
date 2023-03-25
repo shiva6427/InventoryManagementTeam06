@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/background_gradient"
     android:orientation="vertical"
     tools:context=".RegisterActivity">
 
@@ -14,16 +14,29 @@
         android:layout_width="268dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
 
-        android:fontFamily="sans-serif"
+        android:layout_marginTop="100dp"
+        android:fontFamily="serif"
+        android:gravity="center"
         android:text="Product Details"
-        android:textColor="#C1F8B0B0"
-        android:textSize="60sp"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="80dp"
+        app:srcCompat="@drawable/details"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="224dp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -34,7 +47,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="215dp"
         android:text="Product "
-        android:textColor="#C1F8B0B0"
+        android:textColor="#FFECB3"
         android:textSize="20dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="38dp"
@@ -46,12 +59,12 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:textColorHint="#ffff"
-        android:layout_marginBottom="-81dp"
+        android:layout_marginBottom="-110dp"
         android:ems="10"
-        android:textColor="#ffff"
-        android:inputType="textPersonName"
         android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColor="#ffff"
+        android:textColorHint="#E3F2FD"
         tools:layout_editor_absoluteX="114dp"
         tools:layout_editor_absoluteY="211dp" />
 
@@ -61,12 +74,12 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/edititemname"
         android:layout_centerHorizontal="true"
-        android:textColorHint="#ffff"
-        android:textColor="#ffff"
         android:layout_marginBottom="-70dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Category"
+        android:inputType="textPersonName"
+        android:textColor="#ffff"
+        android:textColorHint="#E0F7FA"
 
         tools:layout_editor_absoluteX="114dp"
         tools:layout_editor_absoluteY="211dp" />
@@ -81,7 +94,7 @@
 
         android:layout_marginBottom="-76dp"
         android:text="Category "
-        android:textColor="#C1F8B0B0"
+        android:textColor="#FFE0B2"
         android:textSize="20dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="38dp"
@@ -98,7 +111,7 @@
         android:layout_marginStart="9dp"
         android:layout_marginBottom="-60dp"
         android:text="Price "
-        android:textColor="#C1F8B0B0"
+        android:textColor="#FFE0B2"
         android:textSize="20dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="38dp"
@@ -114,7 +127,7 @@
 
         android:layout_marginBottom="-56dp"
         android:text="Number "
-        android:textColor="#C1F8B0B0"
+        android:textColor="#FFE0B2"
         android:textSize="20dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="38dp"
@@ -126,12 +139,12 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/editcategory"
         android:layout_centerHorizontal="true"
-        android:textColorHint="#ffff"
         android:layout_marginBottom="-70dp"
         android:ems="10"
-        android:textColor="#ffff"
-        android:inputType="number"
         android:hint="$5.50"
+        android:inputType="number"
+        android:textColor="#ffff"
+        android:textColorHint="#E3F2FD"
         tools:layout_editor_absoluteX="114dp"
         tools:layout_editor_absoluteY="211dp" />
 
@@ -144,10 +157,10 @@
         android:layout_marginEnd="108dp"
         android:layout_marginBottom="-36dp"
         android:ems="10"
+        android:hint="Bar/QR Code Number"
         android:inputType="textPersonName"
         android:textColor="#ffff"
         android:textColorHint="#ffff"
-        android:hint="Bar/QR Code Number"
         tools:layout_editor_absoluteX="110dp"
         tools:layout_editor_absoluteY="211dp" />
 
@@ -162,6 +175,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Scan Bar/QR Code"
+        android:textColorLink="#FFFFFF"
         android:textStyle="italic"
         tools:layout_editor_absoluteX="114dp"
         tools:layout_editor_absoluteY="211dp" />
