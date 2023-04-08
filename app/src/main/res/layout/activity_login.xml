@@ -10,6 +10,13 @@
     android:orientation="vertical" >
 
     <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/loginbg" />
+
+    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="252dp"
         android:layout_height="218dp"
@@ -20,15 +27,15 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="185dp"
-        android:layout_height="57dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imageView3"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-46dp"
-        android:fontFamily="@font/allura"
-        android:text="Inventory"
-        android:textColor="#C1F8B0B0"
-        android:textSize="53dp"
+        android:layout_marginBottom="-49dp"
+        android:fontFamily="@font/black_ops_one"
+        android:text="Inventory Management"
+        android:textColor="#87CAEC"
+        android:textSize="30dp"
         android:textStyle="bold" />
 
     <EditText
