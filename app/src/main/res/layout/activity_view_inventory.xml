@@ -6,51 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".viewInventoryActivity"
     android:orientation="vertical"
-    android:background="@drawable/backgroundgradient">
+    android:background="@drawable/background_gradient">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No of Items = "
-            android:textColor="#FFFFFF"
             android:id="@+id/viewInventory"
-            android:textStyle="bold"
-            android:textSize="20dp"
-           android:layout_marginLeft="3dp"
-            />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#FC0703"
-            android:id="@+id/totalnoitem"
-            android:text="0"
-            android:textSize="20dp"
-            android:textStyle="bold"
-
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:fontFamily="@font/armata"
+            android:text="Items Count  "
             android:textColor="#FFFFFF"
-            android:text=" Total sum = $ "
-            android:layout_marginLeft="30dp"
             android:textSize="20dp"
-            android:textStyle="bold"
+            android:textStyle="bold" />
 
-            />
+        <TextView
+            android:id="@+id/totalnoitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/armata"
+            android:text="0"
+            android:textColor="#FBF5F5"
+            android:textSize="40dp"
+
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#FC0703"
-            android:id="@+id/totalsum"
-            android:text="0"
+            android:layout_marginLeft="30dp"
+            android:fontFamily="@font/armata"
+            android:text=" Total sum   "
+            android:textColor="#FFFFFF"
             android:textSize="20dp"
-            android:textStyle="bold"
 
-            />
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/totalsum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/armata"
+            android:text="0"
+            android:textColor="#FAFAFA"
+            android:textSize="40dp"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$"
+            android:textColor="#FFFFFF"
+            android:textSize="40dp" />
 
 
     </LinearLayout>
