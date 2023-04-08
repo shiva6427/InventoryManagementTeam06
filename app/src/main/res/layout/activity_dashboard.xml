@@ -9,11 +9,10 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:background="@drawable/bg"
+        android:background="@drawable/background"
         android:weightSum="10"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
 
 
         <TextView
@@ -26,11 +25,11 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="28dp"
             android:layout_marginBottom="60dp"
-            android:fontFamily="@font/allura"
-            android:text="Welcome,"
-            android:textStyle="bold"
-            android:textColor="#F57C00"
-            android:textSize="40sp" />
+            android:fontFamily="@font/armata"
+            android:text="Hello "
+            android:textColor="#4C366A"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
 
 
@@ -60,8 +59,11 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
+
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp">
+
+
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -74,16 +76,18 @@
 
                         android:layout_width="85dp"
                         android:layout_height="85dp"
-                        android:background="@drawable/circlebackgroundpurple"
-                        android:src="@drawable/ic_add_black_add"/>
-                    <TextView
-                        android:layout_marginTop="10dp"
+                        android:src="@drawable/add"/>
 
+                    <TextView
                         android:layout_width="wrap_content"
+
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/archivo"
                         android:text="Add Product"
-                        android:textSize="17dp"/>
+                        android:textColor="#776D6D"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
 
 
 
@@ -113,19 +117,18 @@
 
                     <ImageView
 
-                        android:layout_width="85dp"
-                        android:layout_height="85dp"
-                        android:padding="10dp"
-                        android:layout_marginLeft="11dp"
-                        android:background="@drawable/circlebackgroundyellow"
-                        android:src="@drawable/ic_delete_black_24dp"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="96dp"
+                        android:src="@drawable/delete" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/archivo"
                         android:text="Delete Product"
+                        android:textColor="#776D6D"
                         android:textSize="17dp"
-                        />
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -159,16 +162,16 @@
 
                         android:layout_width="85dp"
                         android:layout_height="85dp"
-                        android:background="@drawable/circlebackgroundpink"
-                        android:src="@drawable/ic_find_replace_black_24dp"/>
+                        android:src="@drawable/view"/>
 
                     <TextView
-                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/archivo"
                         android:text="View Product"
-                        android:textSize="17dp"/>
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -200,16 +203,17 @@
                         android:layout_width="74dp"
                         android:layout_height="85dp"
                         android:layout_marginLeft="14dp"
-                        android:background="@drawable/circlbackgroundgreen"
-                        android:src="@drawable/ic_attach_money_black_24dp" />
+                        android:src="@drawable/viewinventory" />
 
                     <TextView
-                        android:layout_marginTop="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/archivo"
                         android:text="View Inventory"
-                        android:textSize="17dp"/>
+                        android:textColor="#776D6D"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
 
 
 
