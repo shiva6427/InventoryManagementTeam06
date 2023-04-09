@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".RegisterActivity"
-    android:background="@drawable/gradient">
+    android:background="@drawable/loginbg">
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="236dp"
-        android:layout_height="190dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="20dp"
         app:srcCompat="@drawable/inventory" />
 
     <TextView
@@ -24,11 +24,11 @@
         android:layout_alignBottom="@+id/imageView3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="-90dp"
-        android:fontFamily="@font/allura"
-        android:text="Inventory"
-        android:textColor="#C1F8B0B0"
-        android:textSize="55dp"
+        android:layout_marginBottom="-30dp"
+        android:fontFamily="@font/black_ops_one"
+        android:text="Inventory Management"
+        android:textColor="#87CAEC"
+        android:textSize="30dp"
         android:textStyle="bold" />
 
     <EditText
@@ -37,13 +37,13 @@
         android:layout_height="40dp"
         android:layout_alignBottom="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-65dp"
+        android:layout_marginBottom="-50dp"
         android:background="#11000000"
         android:drawableLeft="@drawable/ic_account_user"
         android:ems="10"
-        android:textColor="#fff"
         android:hint="Email"
         android:inputType="textPersonName"
+        android:textColor="#fff"
         android:textColorHint="#ffff"
         android:textSize="16dp" />
 
@@ -102,8 +102,8 @@
         android:layout_alignBottom="@+id/departmentName"
         android:layout_centerInParent="true"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="-81dp"
 
+        android:layout_marginBottom="-81dp"
         android:background="#172196F3"
         android:text="Sign Up"
         android:textColor="#FFFF"

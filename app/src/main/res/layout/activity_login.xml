@@ -5,24 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/loginbg"
     tools:context=".MainActivity"
     android:orientation="vertical" >
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/loginbg" />
-
-    <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="252dp"
-        android:layout_height="218dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="20dp"
         app:srcCompat="@drawable/inventory" />
 
     <TextView

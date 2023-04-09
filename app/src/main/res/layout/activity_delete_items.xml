@@ -8,18 +8,25 @@
     android:orientation="vertical"
     android:background="@drawable/deletebg">
 
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/deleteicon" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="301dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="85dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/armata"
         android:gravity="center"
         android:text="Delete Items"
-        android:textColor="#FFFFFF"
-        android:textSize="40dp"
+        android:textColor="#ECEAED"
+        android:textSize="35dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="16dp" />
@@ -31,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView"
         android:layout_marginLeft="175dp"
-        android:layout_marginBottom="-275dp"
+        android:layout_marginBottom="-142dp"
         android:ems="10"
         android:fontFamily="@font/armata"
         android:hint="Code Number"
@@ -45,7 +52,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="325dp"
+        android:layout_marginTop="200dp"
         android:fontFamily="@font/armata"
         android:text="Item to Delete:"
         android:textColor="#81D4FA"
@@ -58,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginTop="385dp"
+        android:layout_marginTop="275dp"
         android:background="#05135C"
         android:ems="10"
         android:inputType="textPersonName"
