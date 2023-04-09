@@ -23,8 +23,8 @@ public class viewInventoryActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     RecyclerView mrecyclerview;
     DatabaseReference mdatabaseReference;
-   private TextView totalnoofitem, totalnoofsum;
-   private int counttotalnoofitem =0;
+    private TextView totalnoofitem, totalnoofsum;
+    private int counttotalnoofitem =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,26 +61,26 @@ public class viewInventoryActivity extends AppCompatActivity {
 
 
         mdatabaseReference.addValueEventListener(new ValueEventListener() {
-         @Override
-         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-             int sum=0;
-             for(DataSnapshot ds : dataSnapshot.getChildren()){
-                Map<String,Object> map = (Map<String, Object>) ds.getValue();
-                Object price = map.get("itemprice");
-                int pValue = Integer.parseInt(String.valueOf(price));
-                sum += pValue;
-                totalnoofsum.setText(String.valueOf(sum));
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                int sum=0;
+                for(DataSnapshot ds : dataSnapshot.getChildren()){
+                    Map<String,Object> map = (Map<String, Object>) ds.getValue();
+                    Object price = map.get("itemprice");
+                    int pValue = Integer.parseInt(String.valueOf(price));
+                    sum += pValue;
+                    totalnoofsum.setText(String.valueOf(sum));
 
-              }
+                }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
- 
-            }
-      });
 
-      }
+            }
+        });
+
+    }
 
     @Override
     protected  void  onStart() {
@@ -103,5 +103,5 @@ public class viewInventoryActivity extends AppCompatActivity {
     }
 
 
-  }
+}
 

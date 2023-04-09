@@ -100,4 +100,4 @@ public class scanItemsActivity extends AppCompatActivity {
             item_price.setText(itemprice);
         }
 
-}}
+    }}
