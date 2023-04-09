@@ -12,7 +12,7 @@
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="85dp"
         android:src="@drawable/deleteicon" />
 
     <TextView
@@ -21,8 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="85dp"
-        android:layout_marginTop="35dp"
-        android:fontFamily="@font/armata"
+        android:layout_marginTop="100dp"
+        android:fontFamily="serif"
         android:gravity="center"
         android:text="Delete Items"
         android:textColor="#ECEAED"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView"
         android:layout_marginLeft="175dp"
-        android:layout_marginBottom="-142dp"
+        android:layout_marginBottom="-75dp"
         android:ems="10"
         android:fontFamily="@font/armata"
         android:hint="Code Number"

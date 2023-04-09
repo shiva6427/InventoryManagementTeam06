@@ -4,31 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".scanItemsActivity"
+    android:background="@drawable/scanbg"
     android:orientation="vertical"
-    android:background="@drawable/backgroundgradient">
+    tools:context=".scanItemsActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="222dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="0dp"
-        android:fontFamily="@font/allura"
-        android:text="Scan Items"
-        android:textColor="#C1F8B0B0"
-        android:textSize="45dp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="97dp"
-        tools:layout_editor_absoluteY="16dp" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/scanicon" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="222dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="serif"
+            android:text="Scan Items"
+            android:textColor="#ECEAED"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="97dp"
+            tools:layout_editor_absoluteY="16dp" />
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/imageButtonsearch"
         android:layout_width="58dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
         android:layout_marginLeft="315dp"
+        android:layout_marginTop="9dp"
         app:srcCompat="@drawable/ic_camera_alt_black_24dp"
         tools:ignore="VectorDrawableCompat" />
 
@@ -50,18 +63,20 @@
         android:textSize="16dp" />
 
     <Button
+        android:id="@+id/searchbtnn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/searchbtnn"
         android:layout_marginLeft="150dp"
+        android:layout_marginTop="10dp"
+        android:background="#00B8D4"
         android:text="Search"
-        android:textColor="#F7F2F2"/>
+        android:textColor="#F7F2F2" />
 
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViews"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerViews"
         android:layout_marginTop="40dp">
 
     </android.support.v7.widget.RecyclerView>
