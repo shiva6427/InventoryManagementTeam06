@@ -32,6 +32,13 @@ public class deleteItemsActivity extends AppCompatActivity {
         scantodelete = findViewById(R.id.buttonscandelete);
         deletebtn= findViewById(R.id.deleteItemToTheDatabasebtn);
 
+        deletebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deletefrmdatabase();
+            }
+        });
+
         scantodelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,12 +46,7 @@ public class deleteItemsActivity extends AppCompatActivity {
             }
         });
 
-        deletebtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                deletefrmdatabase();
-            }
-        });
+        
 
     }
 
