@@ -47,13 +47,6 @@ public class scanItemsActivity extends AppCompatActivity {
         mrecyclerview.setHasFixedSize(true);
         mrecyclerview.setLayoutManager(new LinearLayoutManager(this));
 
-        scantosearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), ScanCodeActivitysearch.class));
-            }
-        });
-
         searchbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +54,15 @@ public class scanItemsActivity extends AppCompatActivity {
                 firebasesearch(searchtext);
             }
         });
+
+        scantosearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ScanCodeActivitysearch.class));
+            }
+        });
+
+        
     }
 
     public void firebasesearch(String searchtext){
