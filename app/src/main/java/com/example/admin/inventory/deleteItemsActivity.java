@@ -32,7 +32,12 @@ public class deleteItemsActivity extends AppCompatActivity {
         scantodelete = findViewById(R.id.buttonscandelete);
         deletebtn= findViewById(R.id.deleteItemToTheDatabasebtn);
 
-        
+        scantodelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), ScanCodeActivitydel.class));
+            }
+        });
 
         deletebtn.setOnClickListener(new View.OnClickListener() {
             @Override
