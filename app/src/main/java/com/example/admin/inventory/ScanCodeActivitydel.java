@@ -47,6 +47,6 @@ public class ScanCodeActivitydel extends AppCompatActivity implements ZXingScann
         scannerView.setResultHandler(this);
         scannerView.startCamera();
     }
-    
+
 
 }
