@@ -46,8 +46,6 @@ public class deleteItemsActivity extends AppCompatActivity {
             }
         });
 
-        
-
     }
 
     public void deletefrmdatabase()

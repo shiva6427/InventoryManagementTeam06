@@ -28,7 +28,11 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
         additemActivity.resulttextview.setText(result.getText());
         onBackPressed();
     }
-
+    @Override
+    protected void onPause() {
+        super.onPause();
+        scannerView.stopCamera();
+    }
     @Override
     protected void onPostResume() {
         super.onPostResume();
@@ -40,9 +44,5 @@ public class ScanCodeActivity extends AppCompatActivity implements ZXingScannerV
         scannerView.setResultHandler(this);
         scannerView.startCamera();
     }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        scannerView.stopCamera();
-    }
+
 }
