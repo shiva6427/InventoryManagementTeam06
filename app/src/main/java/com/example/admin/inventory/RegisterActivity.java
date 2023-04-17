@@ -157,7 +157,7 @@ public class RegisterActivity extends AppCompatActivity {
                            // String result = UserID.substring(0, UserID.indexOf("@"));
                             String resultemail = UserID.replace(".","");
 
-                            FirebaseDatabase.getInstance().getReference("Users")
+                            FirebaseDatabase.getInstance("https://inventory-management-fd662-default-rtdb.firebaseio.com").getReference("Users")
                                     .child(resultemail).child("UserDetails")
                                     .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
