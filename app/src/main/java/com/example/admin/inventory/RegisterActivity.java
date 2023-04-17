@@ -136,7 +136,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         progressBar.setVisibility(View.VISIBLE);
-        mAuth.createUserAlongWithEmailAndPassword(email, password)
+        mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -163,13 +163,8 @@ public class RegisterActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     progressBar.setVisibility(View.GONE);
-                                    if (task.isSuccessful()) {
-
-                                        Toast.makeText(RegisterActivity.this, "Registration Success", Toast.LENGTH_LONG).show();
-                                        startActivity(new Intent(RegisterActivity.this,dashboardActivity.class));
-                                    } else {
-                                        //display a failure message
-                                    }
+                                    Toast.makeText(RegisterActivity.this, "Registration Success", Toast.LENGTH_LONG).show();
+                                    startActivity(new Intent(RegisterActivity.this,dashboardActivity.class));
                                 }
                             });
 
