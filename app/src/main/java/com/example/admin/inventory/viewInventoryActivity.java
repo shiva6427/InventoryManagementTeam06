@@ -95,7 +95,7 @@ public class viewInventoryActivity extends AppCompatActivity {
             @Override
             protected void populateViewHolder(scanItemsActivity.UsersViewHolder viewHolder, Items model, int position){
 
-                viewHolder.setDetails(getApplicationContext(),model.getItembarcode(),model.getItemcategory(),model.getItemname(),model.getItemprice());
+                viewHolder.setDetails(getApplicationContext(),model.getItembarcode(),model.getItemcategory(),model.getItemname(),model.getItemlocation(),model.getItemprice());
             }
         };
 

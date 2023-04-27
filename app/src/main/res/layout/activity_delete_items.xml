@@ -31,12 +31,13 @@
         tools:layout_editor_absoluteX="97dp"
         tools:layout_editor_absoluteY="16dp" />
 
-
     <TextView
         android:id="@+id/barcodedelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
         android:layout_marginLeft="175dp"
         android:layout_marginBottom="-75dp"
         android:ems="10"
@@ -44,17 +45,16 @@
         android:hint="Code Number"
         android:inputType="textPersonName"
         android:textColor="#ffff"
-        android:textColorHint="#ffff"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="211dp" />
+        android:textColorHint="#ffff" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="200dp"
         android:fontFamily="@font/armata"
-        android:text="Item to Delete:"
+        android:text="Items:"
         android:textColor="#81D4FA"
         android:textSize="18dp"
         android:textStyle="bold" />
@@ -64,7 +64,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-
         android:layout_marginTop="275dp"
         android:background="#05135C"
         android:ems="10"

@@ -9,7 +9,7 @@ Team 06 Information:
 4. Tejaswini Kattukuri
 
 Apk Link:
-https://1drv.ms/u/s!Aga4XpjBuP_iedk-FPgp5Rj6Oxc?e=TGkTf6
+https://nwmissouri-my.sharepoint.com/:u:/g/personal/s555506_nwmissouri_edu/EQ3niZSZq9tJsyY--kxENZEBdsg5dz08sKP86yyUI_CJ0A?e=czKNYu
 
 To login use credentials
 username - prathyusha8374@gmail.com

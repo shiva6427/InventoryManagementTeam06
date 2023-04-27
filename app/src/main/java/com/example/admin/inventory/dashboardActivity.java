@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//import com.example.admin.inventorymanagement.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -78,7 +79,7 @@ public class dashboardActivity extends AppCompatActivity implements View.OnClick
     {
         firebaseAuth.signOut();
         finish();
-        startActivity(new Intent(dashboardActivity.this,LoginActivity.class));
+        startActivity(new Intent(dashboardActivity.this,MainActivity.class));
         Toast.makeText(dashboardActivity.this,"LOGOUT SUCCESSFUL", Toast.LENGTH_SHORT).show();
 
     }
