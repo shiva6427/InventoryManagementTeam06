@@ -69,29 +69,31 @@ public class scanItemsActivity extends AppCompatActivity {
 
 
     }
-
     public void firebasesearch(String searchtext) {
         Query firebaseSearchQuery = mdatabaseReference.orderByChild("itemname").startAt(searchtext).endAt(searchtext + "\uf8ff");
+        Query firebaseSearchQueryNumber = mdatabaseReference.orderByChild("itembarcode").startAt(searchtext).endAt(searchtext + "\uf8ff");
 
         firebaseSearchQuery.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-                    FirebaseRecyclerAdapter<Items, UsersViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Items, UsersViewHolder>(
-                            Items.class,
-                            R.layout.list_layout,
-                            UsersViewHolder.class,
-                            firebaseSearchQuery
-                    ) {
-                        @Override
-                        protected void populateViewHolder(UsersViewHolder viewHolder, Items model, int position) {
-                            viewHolder.setDetails(getApplicationContext(), model.getItembarcode(), model.getItemcategory(), model.getItemname(), model.getItemlocation(), model.getItemprice());
-                        }
-                    };
-
-                    mrecyclerview.setAdapter(firebaseRecyclerAdapter);
+                    setupFirebaseRecyclerAdapter(firebaseSearchQuery);
                 } else {
-                    Toast.makeText(getApplicationContext(), "Item not found", Toast.LENGTH_SHORT).show();
+                    firebaseSearchQueryNumber.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()) {
+                                setupFirebaseRecyclerAdapter(firebaseSearchQueryNumber);
+                            } else {
+                                Toast.makeText(getApplicationContext(), "Item not found", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+                    });
                 }
             }
 
@@ -102,10 +104,21 @@ public class scanItemsActivity extends AppCompatActivity {
         });
     }
 
+    private void setupFirebaseRecyclerAdapter(Query query) {
+        FirebaseRecyclerAdapter<Items, UsersViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Items, UsersViewHolder>(
+                Items.class,
+                R.layout.list_layout,
+                UsersViewHolder.class,
+                query
+        ) {
+            @Override
+            protected void populateViewHolder(UsersViewHolder viewHolder, Items model, int position) {
+                viewHolder.setDetails(getApplicationContext(), model.getItembarcode(), model.getItemcategory(), model.getItemname(), model.getItemlocation(), model.getItemprice());
+            }
+        };
 
-
-
-
+        mrecyclerview.setAdapter(firebaseRecyclerAdapter);
+    }
     public static class UsersViewHolder extends RecyclerView.ViewHolder{
         View mView;
         public UsersViewHolder(View itemView){
