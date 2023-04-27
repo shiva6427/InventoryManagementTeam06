@@ -36,13 +36,11 @@ public class RegisterActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.passwordRegister);
         editTextcPassword= findViewById(R.id.confirmPassword);
         UserRegisterBtn= findViewById(R.id.button_register);
-//        editTextPhone = findViewById(R.id.edit_text_phone);
         progressBar = findViewById(R.id.progressbar);
         progressBar.setVisibility(View.GONE);
 
         mAuth = FirebaseAuth.getInstance();
 
-        //  findViewById(R.id.button_register).setOnClickListener(this);
 
         UserRegisterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,22 +60,6 @@ public class RegisterActivity extends AppCompatActivity {
             //handle the already login user
         }
     }
-//    public void addStudent(){
-//        String studentNameValue = editTextName.getText().toString();
-//        String mcneeseIdValue = editTextEmail.getText().toString();
-//        if(!TextUtils.isEmpty(studentNameValue)&&!TextUtils.isEmpty(mcneeseIdValue)){
-//            String id = FirebaseDatabase.getInstance().getReference("Users").push().getKey();
-//            User students = new User(studentNameValue,mcneeseIdValue);
-//            // databaseReference.child(bttnName.getText().toString()).push().setValue(students);
-//            FirebaseDatabase.getInstance().getReference("Users").setValue(students);
-//            editTextName.setText("");
-//            editTextEmail.setText("");
-//            Toast.makeText(RegisterActivity.this,"Student Details Added",Toast.LENGTH_SHORT).show();
-//        }
-//        else{
-//            Toast.makeText(RegisterActivity.this,"Please Fill Fields",Toast.LENGTH_SHORT).show();
-//        }
-//    }
 
 
     private void registerUser() {
@@ -122,17 +104,6 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-//        if (phone.isEmpty()) {
-//            editTextPhone.setError(getString(R.string.input_error_phone));
-//            editTextPhone.requestFocus();
-//            return;
-//        }
-//
-//        if (phone.length() != 10) {
-//            editTextPhone.setError(getString(R.string.input_error_phone_invalid));
-//            editTextPhone.requestFocus();
-//            return;
-//        }
 
 
         progressBar.setVisibility(View.VISIBLE);
@@ -143,18 +114,14 @@ public class RegisterActivity extends AppCompatActivity {
 
                         if (task.isSuccessful()) {
 
-//                            addStudent();
 
                             final User user = new User(
                                     name,
                                     email
 
                             );
-                            //.child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                            //important to retrive data and send data based on user email
                             FirebaseUser usernameinfirebase = mAuth.getCurrentUser();
                             String UserID=usernameinfirebase.getEmail();
-                           // String result = UserID.substring(0, UserID.indexOf("@"));
                             String resultemail = UserID.replace(".","");
 
                             FirebaseDatabase.getInstance("https://inventory-management-fd662-default-rtdb.firebaseio.com").getReference("Users")
@@ -176,32 +143,6 @@ public class RegisterActivity extends AppCompatActivity {
                 });
 
     }
-
-
-
-
-//    //Set UserDisplay Name
-//    private void userProfile()
-//    {
-//        FirebaseUser user = mAuth.getCurrentUser();
-//        if(user!= null)
-//        {
-//            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
-//                    .setDisplayName(editTextName.getText().toString().trim())
-//                    //.setPhotoUri(Uri.parse("https://example.com/jane-q-user/profile.jpg"))  // here you can set image link also.
-//                    .build();
-//
-//            user.updateProfile(profileUpdates)
-//                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-//                        @Override
-//                        public void onComplete(@NonNull Task<Void> task) {
-//                            if (task.isSuccessful()) {
-//
-//                            }
-//                        }
-//                    });
-//        }
-//    }
 
 
 

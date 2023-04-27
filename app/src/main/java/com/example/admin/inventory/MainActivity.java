@@ -30,11 +30,6 @@ public class MainActivity extends AppCompatActivity {
     {
 
         startActivity(new Intent(this,LoginActivity.class));
-//        String TextClassname = classname.getText().toString();
-//        // starting our intent
-//        Intent classintent = new Intent(this,SecondActivity.class);
-//        classintent.putExtra("Classname",TextClassname);
-//        startActivityForResult(classintent,request_code);
     }
     public void register (View view)
     {

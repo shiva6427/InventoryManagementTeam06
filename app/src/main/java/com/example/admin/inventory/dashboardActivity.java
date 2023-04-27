@@ -37,12 +37,6 @@ public class dashboardActivity extends AppCompatActivity implements View.OnClick
         String result = finaluser.substring(0, finaluser.indexOf("@"));
         String resultemail = result.replace(".","");
         firebasenameview.setText("Welcome, "+resultemail);
-//        toast.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(dashboardActivity.this, users.getEmail(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
 
 
         addItems = (CardView)findViewById(R.id.addItems);
