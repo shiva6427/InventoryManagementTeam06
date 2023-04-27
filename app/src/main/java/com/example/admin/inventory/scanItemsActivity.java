@@ -2,6 +2,7 @@ package com.example.admin.inventory;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,13 +13,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class scanItemsActivity extends AppCompatActivity {
     public static EditText resultsearcheview;
@@ -65,23 +70,41 @@ public class scanItemsActivity extends AppCompatActivity {
 
     }
 
-    public void firebasesearch(String searchtext){
-        Query firebaseSearchQuery = mdatabaseReference.orderByChild("itembarcode").startAt(searchtext).endAt(searchtext+"\uf8ff");
-        FirebaseRecyclerAdapter<Items, UsersViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Items, UsersViewHolder>
-                (  Items.class,
-                        R.layout.list_layout,
-                        UsersViewHolder.class,
-                        firebaseSearchQuery )
-        {
+    public void firebasesearch(String searchtext) {
+        Query firebaseSearchQuery = mdatabaseReference.orderByChild("itemname").startAt(searchtext).endAt(searchtext + "\uf8ff");
+
+        firebaseSearchQuery.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            protected void populateViewHolder(UsersViewHolder viewHolder, Items model,int position){
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    FirebaseRecyclerAdapter<Items, UsersViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Items, UsersViewHolder>(
+                            Items.class,
+                            R.layout.list_layout,
+                            UsersViewHolder.class,
+                            firebaseSearchQuery
+                    ) {
+                        @Override
+                        protected void populateViewHolder(UsersViewHolder viewHolder, Items model, int position) {
+                            viewHolder.setDetails(getApplicationContext(), model.getItembarcode(), model.getItemcategory(), model.getItemname(), model.getItemlocation(), model.getItemprice());
+                        }
+                    };
 
-                viewHolder.setDetails(getApplicationContext(),model.getItembarcode(),model.getItemcategory(),model.getItemname(),model.getItemlocation(),model.getItemprice() );
+                    mrecyclerview.setAdapter(firebaseRecyclerAdapter);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Item not found", Toast.LENGTH_SHORT).show();
+                }
             }
-        };
 
-        mrecyclerview.setAdapter(firebaseRecyclerAdapter);
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
+
+
+
+
 
     public static class UsersViewHolder extends RecyclerView.ViewHolder{
         View mView;
