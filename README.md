@@ -12,6 +12,6 @@ Apk Link:
 https://nwmissouri-my.sharepoint.com/:u:/g/personal/s555506_nwmissouri_edu/EQ3niZSZq9tJsyY--kxENZEBdsg5dz08sKP86yyUI_CJ0A?e=czKNYu
 
 To login use credentials
-username - prathyusha8374@gmail.com
-password - Prathyu@9030
+username - shiva2211@gmail.com
+password - shiva123
 
